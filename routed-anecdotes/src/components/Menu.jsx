@@ -1,14 +1,11 @@
-import { Link } from 'react-router'
+import { NavLink } from "react-router";
 
-const Menu = () => {
-  const padding = { paddingRight: 5 }
-  return (
-    <div>
-      <Link style={padding} to="/">anecdotes</Link>
-      <Link style={padding} to="/create">create new</Link>
-      <Link style={padding} to="/about">about</Link>
-    </div>
-  )
-}
+const Menu = () => (
+  <nav className="tabs" aria-label="Main">
+    <NavLink className="nav-link" to="/" end>anecdotes</NavLink>
+    <NavLink className="nav-link" to="/create">create new</NavLink>
+    <NavLink className="nav-link" to="/about">about</NavLink>
+  </nav>
+);
 
-export default Menu
+export default Menu;
